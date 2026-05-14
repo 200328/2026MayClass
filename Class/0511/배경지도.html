@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://map.seoul.go.kr/openapi/v5/KEY333_b0271dce947946cbb0b25ce09bab8b54/public/map/css/5.0"><!-- leaflet 기본 css sdk  -->
+        <script type="text/javascript" src="https://map.seoul.go.kr/openapi/v5/KEY333_b0271dce947946cbb0b25ce09bab8b54/public/map/js/5.0"></script><!-- leaflet 기본 js sdk  -->
+        <script type="text/javascript" src="https://map.seoul.go.kr/openapi/v5/KEY333_b0271dce947946cbb0b25ce09bab8b54/public/map/base/js/5179/5.0"></script><!-- leaflet 5179 좌표계 추가-->
+        <style>
+            #map{
+                width: 100%;
+                height: 100%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            var map = L.map("map", {                            
+                crs : getCrsEx()                            				
+                ,zoomControl: false                                         
+                ,zoomAnimation: false                                        
+            });   
+
+            var BASE_KOR_LAYER = new L.TileLayer
+            .DAWULGIS_EX('https://map.seoul.go.kr/openapi/v5/KEY333_b0271dce947946cbb0b25ce09bab8b54/public/map/base/dawul_kor_normal/{z}/{j}/{k}/{x}/{y}/png');
+            
+            var BASE_ENG_LAYER = new L.TileLayer
+            .DAWULGIS_EX('https://map.seoul.go.kr/openapi/v5/KEY333_b0271dce947946cbb0b25ce09bab8b54/public/map/base/dawul_eng_normal/{z}/{j}/{k}/{x}/{y}/png');
+
+            map.setView([37.5665, 126.9780], 10); 
+
+            //map.addLayer(baseLayer)
+
+            var markerLayer = L.marker([37.564508, 126.975713],{
+                icon:L.icon({
+                    iconUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToFWCwvT1pXz6F6Zpp3zzx_30lFCYEupY5Lg&s',
+                    iconSize:[32,32],
+                    iconAnchor:[16,32]
+                })
+            }).addTo(map);
+
+            var markerLayer2 = L.marker([36.232271, 128.975713],{
+                icon:L.icon({
+                    iconUrl:'data:image/jpeg;base64,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',
+                    iconSize:[32,32],
+                    iconAnchor:[16,32]
+                })
+            }).addTo(map)
+
+            //이벤트
+            map.on('overlayadd', function(e){
+                map.setView(e.layer.getLatLng())
+            })
+
+            L.control.layers({
+                '국문': BASE_KOR_LAYER,
+                '영문': BASE_ENG_LAYER
+            },{
+                '마커1': markerLayer,
+                '마커2': markerLayer2
+            },{
+                collapsed:false
+            }).addTo(map);
+
+        </script>
+    </body>
+</html>

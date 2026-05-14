@@ -1,0 +1,110 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body, html, #root {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  background: #0284c7;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.app-header h1 {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.example-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.example-tabs button {
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.example-tabs button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.example-tabs button.active {
+  background: white;
+  color: #0284c7;
+  font-weight: 600;
+  border-color: white;
+}
+
+.map-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* 팝업 스타일 */
+.popup-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0284c7;
+  margin-bottom: 4px;
+}
+
+.popup-desc {
+  font-size: 12px;
+  color: #475569;
+}
+
+/* 범례 */
+.legend {
+  background: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.legend h4 {
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #1e293b;
+}
+
+.legend i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+
+/* 커스텀 클러스터 아이콘 */
+.custom-cluster {
+  background: transparent !important;
+  border: none !important;
+}

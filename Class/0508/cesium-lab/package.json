@@ -1,0 +1,18 @@
+{
+  "name": "cesium-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cesium": "^1.118.2"
+  },
+  "devDependencies": {
+    "vite": "^5.3.1",
+    "vite-plugin-cesium": "^1.2.23"
+  }
+}

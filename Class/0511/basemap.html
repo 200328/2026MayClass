@@ -1,0 +1,419 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css"
+        href="https://map.seoul.go.kr/openapi/v5/KEY333_b0271dce947946cbb0b25ce09bab8b54/public/map/css/5.0">
+    <!-- leaflet 기본 css sdk  -->
+    <script type="text/javascript"
+        src="https://map.seoul.go.kr/openapi/v5/KEY333_b0271dce947946cbb0b25ce09bab8b54/public/map/js/5.0"></script>
+    <!-- leaflet 기본 js sdk  -->
+    <script type="text/javascript"
+        src="https://map.seoul.go.kr/openapi/v5/KEY333_b0271dce947946cbb0b25ce09bab8b54/public/map/base/js/5179/5.0"></script>
+    <!-- leaflet 5179 좌표계 추가-->
+    <style>
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map("map", {
+            crs: getCrsEx()
+            , zoomControl: false
+            , zoomAnimation: false
+        });
+
+        var BASE_KOR_LAYER = new L.TileLayer
+            .DAWULGIS_EX('https://map.seoul.go.kr/openapi/v5/KEY333_b0271dce947946cbb0b25ce09bab8b54/public/map/base/dawul_kor_normal/{z}/{j}/{k}/{x}/{y}/png');
+
+        var BASE_ENG_LAYER = new L.TileLayer
+            .DAWULGIS_EX('https://map.seoul.go.kr/openapi/v5/KEY333_b0271dce947946cbb0b25ce09bab8b54/public/map/base/dawul_eng_normal/{z}/{j}/{k}/{x}/{y}/png');
+
+        map.setView([37.5665, 126.9780], 10);
+
+        map.addLayer(BASE_KOR_LAYER)
+
+        var geojson = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "popcnt": 5000
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            [
+                                [
+                                    126.97780795586715,
+                                    37.566962363175676
+                                ],
+                                [
+                                    126.97790263412679,
+                                    37.56645312138872
+                                ],
+                                [
+                                    126.97906582417033,
+                                    37.56649064458584
+                                ],
+                                [
+                                    126.97903877323841,
+                                    37.566951642331546
+                                ],
+                                [
+                                    126.97780795586715,
+                                    37.566962363175676
+                                ]
+                            ]
+                        ],
+                        "type": "Polygon"
+                    },
+                    "id": 0
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "popcnt": 100
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            [
+                                [
+                                    126.97846921963088,
+                                    37.56806466595218
+                                ],
+                                [
+                                    126.97845992584871,
+                                    37.567727811217495
+                                ],
+                                [
+                                    126.9789411879076,
+                                    37.56771079613168
+                                ],
+                                [
+                                    126.97904928671534,
+                                    37.5680789356619
+                                ],
+                                [
+                                    126.97846921963088,
+                                    37.56806466595218
+                                ]
+                            ]
+                        ],
+                        "type": "Polygon"
+                    },
+                    "id": 1
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "popcnt": 400
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            [
+                                [
+                                    126.97509342720707,
+                                    37.567163222488986
+                                ],
+                                [
+                                    126.97489668975953,
+                                    37.566712431505294
+                                ],
+                                [
+                                    126.97520017111566,
+                                    37.56671615496377
+                                ],
+                                [
+                                    126.9753474456482,
+                                    37.56714222856199
+                                ],
+                                [
+                                    126.97509342720707,
+                                    37.567163222488986
+                                ]
+                            ]
+                        ],
+                        "type": "Polygon"
+                    },
+                    "id": 2
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "popcnt": 3000
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            [
+                                [
+                                    126.97990145762293,
+                                    37.567253764528076
+                                ],
+                                [
+                                    126.97984576092409,
+                                    37.566900849261245
+                                ],
+                                [
+                                    126.98064111358082,
+                                    37.56691477479745
+                                ],
+                                [
+                                    126.98069218678006,
+                                    37.56724163762594
+                                ],
+                                [
+                                    126.97990145762293,
+                                    37.567253764528076
+                                ]
+                            ]
+                        ],
+                        "type": "Polygon"
+                    },
+                    "id": 3
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "popcnt": 1000
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            [
+                                [
+                                    126.98050260126234,
+                                    37.56869376400127
+                                ],
+                                [
+                                    126.98050256792737,
+                                    37.568407022715135
+                                ],
+                                [
+                                    126.98110637673506,
+                                    37.568383673032116
+                                ],
+                                [
+                                    126.9810274478408,
+                                    37.56872044373981
+                                ],
+                                [
+                                    126.98050260126234,
+                                    37.56869376400127
+                                ]
+                            ]
+                        ],
+                        "type": "Polygon"
+                    },
+                    "id": 4
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "popcnt": 2000
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            [
+                                [
+                                    126.98222195377213,
+                                    37.56789650323141
+                                ],
+                                [
+                                    126.9822379786645,
+                                    37.56753742636808
+                                ],
+                                [
+                                    126.98244274889748,
+                                    37.5675320011252
+                                ],
+                                [
+                                    126.98241181331747,
+                                    37.56789823729402
+                                ],
+                                [
+                                    126.98222195377213,
+                                    37.56789650323141
+                                ]
+                            ]
+                        ],
+                        "type": "Polygon"
+                    },
+                    "id": 5
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "popcnt": 4500
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            [
+                                [
+                                    126.97794772086417,
+                                    37.56895114286772
+                                ],
+                                [
+                                    126.97792700580226,
+                                    37.56871068212668
+                                ],
+                                [
+                                    126.97848020415535,
+                                    37.56872778789696
+                                ],
+                                [
+                                    126.9784228898248,
+                                    37.56891282069728
+                                ],
+                                [
+                                    126.97794772086417,
+                                    37.56895114286772
+                                ]
+                            ]
+                        ],
+                        "type": "Polygon"
+                    },
+                    "id": 6
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "popcnt": 3200
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            [
+                                [
+                                    126.97997952767389,
+                                    37.566755842445986
+                                ],
+                                [
+                                    126.97995873702507,
+                                    37.56655237895964
+                                ],
+                                [
+                                    126.98052831566474,
+                                    37.566557581242606
+                                ],
+                                [
+                                    126.98049777615938,
+                                    37.5667176466543
+                                ],
+                                [
+                                    126.97997952767389,
+                                    37.566755842445986
+                                ]
+                            ]
+                        ],
+                        "type": "Polygon"
+                    },
+                    "id": 7
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "popcnt": 500
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            [
+                                [
+                                    126.98162915608924,
+                                    37.56667120148305
+                                ],
+                                [
+                                    126.98166417840667,
+                                    37.56623029575442
+                                ],
+                                [
+                                    126.98216518935573,
+                                    37.56627246012448
+                                ],
+                                [
+                                    126.98212102739171,
+                                    37.56668140360148
+                                ],
+                                [
+                                    126.98162915608924,
+                                    37.56667120148305
+                                ]
+                            ]
+                        ],
+                        "type": "Polygon"
+                    },
+                    "id": 8
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "popcnt": 1500
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            [
+                                [
+                                    126.98135792453178,
+                                    37.56766979864341
+                                ],
+                                [
+                                    126.98145534742355,
+                                    37.56743723248921
+                                ],
+                                [
+                                    126.98170988100736,
+                                    37.56751289726179
+                                ],
+                                [
+                                    126.98167357046088,
+                                    37.56771208149368
+                                ],
+                                [
+                                    126.98135792453178,
+                                    37.56766979864341
+                                ]
+                            ]
+                        ],
+                        "type": "Polygon"
+                    },
+                    "id": 9
+                }
+            ]
+        };
+
+        var geojsonLayer = L.geoJSON(geojson,{
+            style:function(f){
+                var style = {};
+  
+                if(f.properties.popcnt < 200){
+                    style = {color:'yellow'}
+                }else if(f.properties.popcnt < 3000){
+                    style = {color:'green'}
+                }else if(f.properties.popcnt < 5000){
+                    style = {color:'red'}
+                }else{
+                    style = {color:'black'}
+                }
+
+                return style;
+
+            },
+            onEachFeature:function(feature, layer){
+                feature.properties.popcnt
+
+                layer.bindPopup(
+                    '이용객수: <h2>'+feature.properties.popcnt+'</h2>'
+                );
+
+                layer.on('')
+            }
+        });
+
+        map.addLayer(geojsonLayer);
+
+    </script>
+</body>
+
+</html>

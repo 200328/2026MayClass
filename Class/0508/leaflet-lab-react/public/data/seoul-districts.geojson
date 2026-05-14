@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "종로구",
+        "population": 150000,
+        "area_km2": 23.91
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [126.960, 37.585], [127.020, 37.585],
+          [127.020, 37.555], [126.960, 37.555],
+          [126.960, 37.585]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "중구",
+        "population": 125000,
+        "area_km2": 9.96
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [126.970, 37.570], [127.020, 37.570],
+          [127.020, 37.545], [126.970, 37.545],
+          [126.970, 37.570]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "용산구",
+        "population": 240000,
+        "area_km2": 21.87
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [126.960, 37.545], [127.020, 37.545],
+          [127.020, 37.510], [126.960, 37.510],
+          [126.960, 37.545]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "마포구",
+        "population": 380000,
+        "area_km2": 23.84
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [126.890, 37.580], [126.960, 37.580],
+          [126.960, 37.545], [126.890, 37.545],
+          [126.890, 37.580]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "서대문구",
+        "population": 310000,
+        "area_km2": 17.62
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [126.900, 37.615], [126.960, 37.615],
+          [126.960, 37.580], [126.900, 37.580],
+          [126.900, 37.615]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "성동구",
+        "population": 290000,
+        "area_km2": 16.86
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [127.020, 37.570], [127.080, 37.570],
+          [127.080, 37.535], [127.020, 37.535],
+          [127.020, 37.570]
+        ]]
+      }
+    }
+  ]
+}
